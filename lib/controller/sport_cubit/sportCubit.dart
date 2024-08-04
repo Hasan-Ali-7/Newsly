@@ -5,6 +5,7 @@ import 'SportStates.dart';
 
 class SportNewsCubit extends Cubit<SportNewsState> {
   SportNewsCubit() : super(SportNewsInitialState());
+  static SportNewsCubit get(context) => BlocProvider.of(context);
 
   String? sportLocation;
   List<String> sportLocations = [

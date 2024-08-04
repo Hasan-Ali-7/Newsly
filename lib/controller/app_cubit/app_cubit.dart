@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsly/views/home.dart';
+import 'package:newsly/views/mixed.dart';
 import 'package:newsly/views/tech.dart';
 import '../../model/api_service.dart';
 import '../../views/economy.dart';
@@ -64,24 +64,8 @@ class AppCubit extends Cubit<AppState> {
 
   List? allArticles;
   
-  void fetchAllArticles(String? allLocation) async {
-    try 
-    {
-        emit(ShowAllNewsLoadingState());
-        allArticles = await NewsApi().fetchArticles(
-            country: allLocation ?? 'us',
-            category: 'general',
-        );
-        emit(ShowAllNewsLoadingState());
-    }
-    catch (e) 
-    {
-        debugPrint('$e');
-    }
-  }
-
-
-
+  
+  
   int currentIndex = 0;
 
   void changeNavBar(index) {
@@ -95,7 +79,7 @@ class AppCubit extends Cubit<AppState> {
         Icons.apps,
         size: 30,
       ),
-      label: 'All',
+      label: 'Mixed',
     ),
     BottomNavigationBarItem(
       icon: Icon(
@@ -128,7 +112,7 @@ class AppCubit extends Cubit<AppState> {
   ];
 
   List<Widget>  Screens = [
-    const Home(),
+    const Mixed(),
     const Tech(),
     const Economy(),
     const Science(),

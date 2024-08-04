@@ -5,6 +5,7 @@ import 'ScienceStates.dart';
 
 class ScienceNewsCubit extends Cubit<ScienceNewsState> {
   ScienceNewsCubit() : super(ScienceNewsInitialState());
+  static ScienceNewsCubit get(context) => BlocProvider.of(context);
 
   String? scienceLocation;
   List<String> scienceLocations = [

@@ -7,7 +7,8 @@ import 'controller/app_cubit/app_states.dart';
 import 'controller/hive/hive.dart';
 
 
-void main() async {
+void main() async 
+{
 	WidgetsFlutterBinding.ensureInitialized();
 	await Hive.initFlutter();
 	await Hive.openBox("NewslyBox");
@@ -15,7 +16,8 @@ void main() async {
 }
 
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget 
+{
 	const MyApp({super.key});
 
 	@override

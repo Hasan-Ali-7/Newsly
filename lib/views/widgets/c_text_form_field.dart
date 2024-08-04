@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import '../../controller/app_cubit/app_cubit.dart';
 
 
@@ -73,7 +71,7 @@ Widget cTextFormField(
       ),
 
 
-      style: GoogleFonts.bitter( 
+      style: TextStyle( 
         fontSize: 18,  
         fontWeight: FontWeight.w500
       ),

@@ -1,10 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:newsly/controller/science_cubit/scienceCubit.dart';
+import 'package:newsly/views/widgets/c_article.dart';
 
 class Science extends StatelessWidget {
-const Science({ Key? key }) : super(key: key);
+const Science({ super.key });
 
   @override
   Widget build(BuildContext context){
-    return Center();
+
+    ScienceNewsCubit cubit = ScienceNewsCubit.get(context);
+    cubit.fetchScienceArticles(null);
+
+    return Container(
+      color: Colors.amber,
+      width: double.infinity,
+      child: SingleChildScrollView(
+        child: ListView.separated(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          padding: const EdgeInsets.all(10),
+          itemCount: 10,
+          itemBuilder: (context, index) => CArticle(
+            article: cubit.scienceArticles![index],
+          ),
+          separatorBuilder: (context, index) => const SizedBox(height: 10,),
+        ),
+      ),
+    );
   }
 }

@@ -5,8 +5,10 @@ import 'TechStates.dart';
 
 class TechNewsCubit extends Cubit<TechNewsState> {
   TechNewsCubit() : super(TechNewsInitialState());
+  static TechNewsCubit get(context) => BlocProvider.of(context);
 
   String? techLocation;
+
   List<String> techLocations = [
     'eg',
     'ae',
@@ -30,6 +32,7 @@ class TechNewsCubit extends Cubit<TechNewsState> {
   ];
 
   List? techArticles;
+
   void fetchTechArticles(String? techLocation) async {
     try {
       emit(ShowTechNewsLoading());

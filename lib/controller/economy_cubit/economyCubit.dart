@@ -6,6 +6,7 @@ import 'economyStates.dart';
 
 class EconomyNewsCubit extends Cubit<EconomyNewsState> {
   EconomyNewsCubit() : super(EconomyNewsInitialState());
+  static EconomyNewsCubit get(context) => BlocProvider.of(context);
 
   String? economyLocation;
   List<String> economyLocations = [

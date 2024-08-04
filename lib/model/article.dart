@@ -4,7 +4,7 @@ class Article {
   final String? image;
   final String? title;
   final String? description;
-  final String? auther;
+  final String? author;
   final String? time;
 
 
@@ -13,7 +13,7 @@ class Article {
     this.image,
     this.title,
     this.description,
-    this.auther,
+    this.author,
     this.time,
   });
 
@@ -24,7 +24,7 @@ class Article {
       image: jsonData['urlToImage'],
       title: jsonData['title'],
       description: jsonData['description'],
-      auther: jsonData['auther'],
+      author: jsonData['auther'],
       time: jsonData['publishedAt'],
     );
   }
