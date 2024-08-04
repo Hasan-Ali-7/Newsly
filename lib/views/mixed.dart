@@ -1,7 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:newsly/views/widgets/c_article.dart';
-import '../controller/app_cubit/app_cubit.dart';
+import '../controller/cubit/app_cubit.dart';
 
 
 
@@ -29,7 +29,7 @@ class Mixed extends StatelessWidget {
               child: Swiper(
                 itemCount: 5,
                 itemBuilder: (context, index) =>  CArticle( 
-                  article: cubit.allArticles![index], 
+                  article: cubit.mixedArticles![index], 
                 ),
                 autoplay: true,
                 axisDirection: AxisDirection.right,
@@ -49,7 +49,7 @@ class Mixed extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               itemCount: 10,
               itemBuilder: (context, index) => CArticle(
-                article: cubit.allArticles![index], 
+                article: cubit.mixedArticles![index], 
               ),
               separatorBuilder: (context, index) => const SizedBox(height: 10,),
             ),

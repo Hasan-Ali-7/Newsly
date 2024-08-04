@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newsly/controller/science_cubit/scienceCubit.dart';
+import '../controller/cubit/app_cubit.dart';
 import 'package:newsly/views/widgets/c_article.dart';
+
 
 class Science extends StatelessWidget {
 const Science({ super.key });
@@ -8,8 +9,7 @@ const Science({ super.key });
   @override
   Widget build(BuildContext context){
 
-    ScienceNewsCubit cubit = ScienceNewsCubit.get(context);
-    cubit.fetchScienceArticles(null);
+    AppCubit cubit = AppCubit.get(context);
 
     return Container(
       color: Colors.amber,

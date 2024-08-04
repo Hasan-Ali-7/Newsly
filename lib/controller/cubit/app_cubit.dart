@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newsly/views/mixed.dart';
 import 'package:newsly/views/tech.dart';
-import '../../model/api_service.dart';
 import '../../views/economy.dart';
 import '../../views/science.dart';
 import '../../views/sport.dart';
 import '../hive/hive.dart';
 import 'app_states.dart';
+
+
 
 class AppCubit extends Cubit<AppState> {
   AppCubit() : super( AppInitialState());
@@ -38,34 +39,6 @@ class AppCubit extends Cubit<AppState> {
 
   
 
-  String? allLocation;
-  
-  List<String> allLocations = [
-      'eg',
-      'ae',
-      'sa',
-      'us',
-      'ru',
-      'cn',
-      'jp',
-      'kr',
-      'tw',
-      'in',
-      'br',
-      'ar',
-      'ca',
-      'gb',
-      'fr',
-      'de',
-      'it',
-      'no',
-      'ie',
-  ];
-
-  List? allArticles;
-  
-  
-  
   int currentIndex = 0;
 
   void changeNavBar(index) {
@@ -118,5 +91,41 @@ class AppCubit extends Cubit<AppState> {
     const Science(),
     const Sport(),
   ];
+
+
+
+  String? mixedLocation;
+  String? techLocation;
+  String? economyLocation;
+  String? scienceLocation;
+  String? sportLocation;
+  
+  List<String> allLocations = [
+      'eg',
+      'ae',
+      'sa',
+      'us',
+      'ru',
+      'cn',
+      'jp',
+      'kr',
+      'tw',
+      'in',
+      'br',
+      'ar',
+      'ca',
+      'gb',
+      'fr',
+      'de',
+      'it',
+      'no',
+      'ie',
+  ];
+
+  List? mixedArticles;
+  List? techArticles;
+  List? economyArticles;
+  List? scienceArticles;
+  List? sportArticles;
 
 }

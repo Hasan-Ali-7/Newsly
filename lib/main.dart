@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:newsly/controller/app_cubit/app_cubit.dart';
+import 'package:newsly/controller/cubit/app_cubit.dart';
 import 'package:newsly/views/home.dart';
-import 'controller/app_cubit/app_states.dart';
+import 'controller/cubit/app_states.dart';
 import 'controller/hive/hive.dart';
 
 

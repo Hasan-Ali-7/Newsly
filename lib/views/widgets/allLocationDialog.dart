@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsly/controller/app_cubit/app_cubit.dart';
+import 'package:newsly/controller/cubit/app_cubit.dart';
 
 allLocationDialog (context)=> showDialog(
   context: context, 
@@ -17,7 +17,7 @@ allLocationDialog (context)=> showDialog(
           children: [
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[0];
                 Navigator.pop(context);
               },
@@ -44,7 +44,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[1];
                 Navigator.pop(context);
               },
@@ -71,7 +71,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[2];
                 Navigator.pop(context);
               },
@@ -98,7 +98,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[3];
                 Navigator.pop(context);
               },
@@ -125,7 +125,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[4];
                 Navigator.pop(context);
               },
@@ -152,7 +152,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[5];
                 Navigator.pop(context);
               },
@@ -179,7 +179,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[6];
                 Navigator.pop(context);
               },
@@ -206,7 +206,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[7];
                 Navigator.pop(context);
               },
@@ -233,7 +233,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[8];
                 Navigator.pop(context);
               },
@@ -260,7 +260,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[9];
                 Navigator.pop(context);
               },
@@ -287,7 +287,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[10];
                 Navigator.pop(context);
               },
@@ -314,7 +314,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[11];
                 Navigator.pop(context);
               },
@@ -341,7 +341,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[12];
                 Navigator.pop(context);
               },
@@ -368,7 +368,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[13];
                 Navigator.pop(context);
               },
@@ -395,7 +395,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[14];
                 Navigator.pop(context);
               },
@@ -422,7 +422,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[15];
                 Navigator.pop(context);
               },
@@ -449,7 +449,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[16];
                 Navigator.pop(context);
               },
@@ -476,7 +476,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[17];
                 Navigator.pop(context);
               },
@@ -503,7 +503,7 @@ allLocationDialog (context)=> showDialog(
             const Divider( height: 25, thickness: 2,),
             GestureDetector(
               onTap: (){
-                BlocProvider.of<AppCubit>(context).allLocation = 
+                BlocProvider.of<AppCubit>(context).mixedLocation = 
                 BlocProvider.of<AppCubit>(context).allLocations[18];
                 Navigator.pop(context);
               },

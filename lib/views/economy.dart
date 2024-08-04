@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:newsly/controller/economy_cubit/economyCubit.dart';
 import 'package:newsly/views/widgets/c_article.dart';
+import '../controller/cubit/app_cubit.dart';
+
 
 class Economy extends StatelessWidget {
 const Economy({ super.key });
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
 
-    EconomyNewsCubit cubit = EconomyNewsCubit.get(context);
-    // cubit.fetchEconomyArticles(null);
+    AppCubit cubit = AppCubit.get(context);
 
     return Container(
       color: Colors.amber,

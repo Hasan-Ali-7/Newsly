@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:newsly/model/get_api_data.dart';
 import 'package:newsly/views/widgets/c_text_form_field.dart';
-import '../controller/app_cubit/app_cubit.dart';
+import '../controller/cubit/app_cubit.dart';
 import '../model/api_service.dart';
 import 'widgets/allLocationDialog.dart';
 
@@ -12,17 +13,16 @@ class Home extends StatelessWidget {
 	Widget build(BuildContext context){
 
 		AppCubit cubit = AppCubit.get(context);
-
-    fetchAllArticles(String? allLocation) async {
-      cubit.allArticles = await NewsApi().fetchArticles(
-        country: allLocation ?? 'us',
-        category: 'general',
-      );
-    }
-
-
-
 		
+    GetData getAllData = GetData(context);
+    getAllData.fetchMixedArticles();
+    getAllData.fetchTechArticles();
+    getAllData.fetchEconomyArticles();
+    getAllData.fetchScienceArticles();
+    getAllData.fetchSportArticles();
+
+
+
 		return SafeArea(
 			child: Scaffold(
 

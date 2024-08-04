@@ -19,6 +19,7 @@ class CArticle extends StatelessWidget {
       //     builder: (context) => WebViewContainer(articleURL: article.articleURL ?? 'https://www.google.com',),
       //   )
       // ),
+
       child: Container(
     
         decoration: BoxDecoration(
@@ -69,17 +70,17 @@ class CArticle extends StatelessWidget {
                     children: [
                       Text(
                         article.author ?? '',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14, 
                           color: Colors.white, 
                           fontWeight: FontWeight.w500
                         ),
                         maxLines: 1,
                       ),
-                      SizedBox(width: 20,),
+                      const SizedBox(width: 20,),
                       Text(
                         article.time ?? '',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14, 
                           color: Colors.white, 
                           fontWeight: FontWeight.normal
